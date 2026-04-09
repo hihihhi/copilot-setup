@@ -31,6 +31,13 @@ New to Copilot prompting? Read [`docs/beginner-prompting-guide.md`](./docs/begin
 
 ## Install
 
+### Air-gapped / no scripts (recommended for enterprise)
+
+Just copy the files — no scripts, no internet, no package manager required.
+See **[MANUAL-INSTALL.md](./MANUAL-INSTALL.md)** for the exact file list and priority order.
+
+### With scripts
+
 **Unix / Git Bash / macOS / Linux:**
 ```bash
 git clone <this-repo>
@@ -59,13 +66,17 @@ Type `/name` in Copilot Chat to invoke:
 
 | Command | What it does |
 |---------|-------------|
+| `/plan` | Plan a feature before writing any code — scope, risks, step-by-step |
+| `/scaffold` | Scaffold a new module/feature with all required files |
+| `/explain` | Structured explanation: what, why, dependencies, TL;DR |
+| `/commit` | Generate a conventional commit message from the diff |
+| `/tdd` | Test-first development — write failing tests before implementation |
 | `/code-review` | Structured review: correctness, security, performance, maintainability |
 | `/security-review` | OWASP Top 10 audit with severity ratings and remediation |
-| `/tdd` | Test-first development — write failing tests before implementation |
 | `/debug` | Systematic debugging: reproduce → isolate → hypothesize → fix → verify |
+| `/refactor` | Surgical refactoring without changing behavior |
 | `/deep-research` | 5-stage research pipeline with anti-sycophancy guards |
 | `/prd-to-plan` | Convert requirements into vertical slices with acceptance criteria |
-| `/refactor` | Surgical refactoring without changing behavior |
 
 ---
 

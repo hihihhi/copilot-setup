@@ -3,25 +3,37 @@
 
   "github.copilot.chat.codeGeneration.instructions": [
     {
-      "text": "Always state assumptions before implementing. Match existing code style. No features beyond what was asked. Every changed line must trace to the request."
+      "text": "State assumptions before implementing. Match existing code style. No features beyond what was asked. Every changed line must trace to the request. Check package.json before suggesting new packages — if a package isn't already installed, say so rather than silently using it."
     }
   ],
 
   "github.copilot.chat.testGeneration.instructions": [
     {
-      "text": "Use Arrange-Act-Assert structure. One assertion per test. Test names describe behavior not implementation. Mock only at system boundaries (network, DB, filesystem). No shared mutable state between tests."
+      "text": "Arrange-Act-Assert structure. One assertion per test concept. Test names describe behavior not implementation: 'returns 404 when user not found' not 'test getUser'. Mock only at system boundaries (network, DB, filesystem, time). No shared mutable state between tests. Co-locate test files with the module they test."
     }
   ],
 
   "github.copilot.chat.reviewSelection.instructions": [
     {
-      "text": "Review for: correctness (logic errors, edge cases), security (injection, auth gaps, secrets), performance (N+1, unbounded queries), maintainability (single responsibility, naming). Format each finding as [SEVERITY] Line N: issue → fix."
+      "text": "Review for: (1) Correctness — logic errors, edge cases, off-by-ones, incorrect assumptions. (2) Security — injection risks, auth gaps, secrets in code, unsafe data handling. (3) Performance — N+1 queries, unbounded allocations, sync blocking in async contexts. (4) Maintainability — single responsibility, naming clarity, missing error handling at boundaries. Format each finding as: [SEVERITY: critical/high/medium/low] Line N: <issue> → <fix>. End with a one-sentence overall assessment."
     }
   ],
 
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "text": "Use conventional commits: feat: fix: chore: docs: refactor: test: perf: — imperative mood, 72 char subject line max, explain WHY not WHAT in body if needed."
+      "text": "Use conventional commits: feat: fix: chore: docs: refactor: test: perf: style: — imperative mood ('add' not 'added'), 72 char subject max, explain WHY not WHAT in the body if the subject doesn't make it obvious. Breaking changes: append ! to type and add BREAKING CHANGE: footer."
+    }
+  ],
+
+  "github.copilot.chat.fixCode.instructions": [
+    {
+      "text": "Fix only the reported issue. Do not refactor surrounding code. Explain why the fix works in one sentence. If the fix has side effects or trade-offs, say so. Add a test that would have caught this bug."
+    }
+  ],
+
+  "github.copilot.chat.explain.instructions": [
+    {
+      "text": "Explain what the code does, why it's designed that way (non-obvious choices), what it depends on, and who uses it. Be honest about unclear parts or potential issues. End with a one-sentence TL;DR."
     }
   ],
 
