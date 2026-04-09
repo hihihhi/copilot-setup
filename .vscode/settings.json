@@ -1,0 +1,32 @@
+{
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "text": "Always state assumptions before implementing. Match existing code style. No features beyond what was asked. Every changed line must trace to the request."
+    }
+  ],
+
+  "github.copilot.chat.testGeneration.instructions": [
+    {
+      "text": "Use Arrange-Act-Assert structure. One assertion per test. Test names describe behavior not implementation. Mock only at system boundaries (network, DB, filesystem). No shared mutable state between tests."
+    }
+  ],
+
+  "github.copilot.chat.reviewSelection.instructions": [
+    {
+      "text": "Review for: correctness (logic errors, edge cases), security (injection, auth gaps, secrets), performance (N+1, unbounded queries), maintainability (single responsibility, naming). Format each finding as [SEVERITY] Line N: issue → fix."
+    }
+  ],
+
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Use conventional commits: feat: fix: chore: docs: refactor: test: perf: — imperative mood, 72 char subject line max, explain WHY not WHAT in body if needed."
+    }
+  ],
+
+  "editor.formatOnSave": true,
+  "editor.rulers": [100],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true
+}
