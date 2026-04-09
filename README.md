@@ -23,6 +23,12 @@ Commit these files into your repository. Every developer on the team gets the sa
 
 ---
 
+## Getting Started
+
+New to Copilot prompting? Read [`docs/beginner-prompting-guide.md`](./docs/beginner-prompting-guide.md) — covers the 4-part prompt formula, ready-to-use templates, and how to clarify context so the installed rules actually kick in.
+
+---
+
 ## Install
 
 **Unix / Git Bash / macOS / Linux:**
