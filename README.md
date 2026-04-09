@@ -82,6 +82,7 @@ These apply **automatically** when Copilot works with matching files:
 | `tests.instructions.md` | `**/*.test.*`, `**/*.spec.*`, `**/tests/**` |
 | `sql.instructions.md` | `**/*.sql`, `**/migrations/**` |
 | `docker.instructions.md` | `**/Dockerfile*`, `**/docker-compose*.yml` |
+| `frontend-aesthetics.instructions.md` | `**/*.tsx`, `**/*.css`, `**/components/**`, `**/pages/**` |
 
 ---
 
