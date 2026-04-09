@@ -5,9 +5,24 @@
 ---
 
 ## Think Before Coding
-- State assumptions explicitly before implementing. Multiple interpretations → list them.
-- Unclear requirement → stop and ask. Never guess and implement.
+- State assumptions explicitly before implementing. Multiple interpretations → list them, ask which one.
+- Unclear requirement → stop and ask ONE specific question. Never guess and implement.
 - Simpler approach exists → say so before building the complex one.
+
+## When to Ask (Non-Negotiable)
+Ask before acting when:
+- **Ambiguous scope**: "refactor this" — which part? what outcome? Ask.
+- **Multiple valid interpretations**: state both, ask which one. One question only.
+- **Missing file/function context**: "fix the bug" without specifying where — ask for location.
+- **Destructive changes**: deleting files, dropping DB columns, overwriting data — confirm first.
+- **Contradicts existing patterns**: if the request conflicts with code already in the repo, flag it.
+
+Never ask when:
+- The request is specific and unambiguous (just do it)
+- The answer is visible in the code already open
+- You've already asked and received clarification this session
+
+Format for asking: **One sentence** stating what's unclear, followed by the single most important question.
 
 ## Simplicity First
 - No features beyond what was asked. No speculative abstractions.
@@ -143,3 +158,11 @@ const user = await db.query('SELECT * FROM users WHERE id = $1', [id])
 - **Mock only**: external services (email, payments, 3rd-party APIs)
 - Every bug fix gets a regression test that reproduces the bug before the fix
 - Test the public API / observable behavior — not internal implementation details
+
+## How to Use Project Memory
+Project memory is stored in `.github/memory/` and injected below automatically.
+To save a memory: `node scripts/memory-save.js` (interactive) or use `Ctrl+Shift+M` in VS Code.
+To rebuild this block after editing memory files: `node scripts/memory-save.js --rebuild`
+
+<!-- MEMORY:START -->
+<!-- MEMORY:END -->

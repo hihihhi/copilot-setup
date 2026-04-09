@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Memory: Save",
+      "type": "shell",
+      "command": "node scripts/memory-save.js",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true
+      },
+      "group": "none",
+      "detail": "Save a preference, decision, or pattern to Copilot memory"
+    },
+    {
+      "label": "Memory: Show",
+      "type": "shell",
+      "command": "node scripts/memory-save.js --show",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "group": "none",
+      "detail": "Display all saved memory entries"
+    },
+    {
+      "label": "Memory: Rebuild",
+      "type": "shell",
+      "command": "node scripts/memory-save.js --rebuild",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "group": "none",
+      "detail": "Regenerate the memory block in copilot-instructions.md"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "key": "ctrl+shift+m",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Memory: Save",
+    "when": "editorTextFocus"
+  }
+]
